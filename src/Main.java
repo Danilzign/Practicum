@@ -8,6 +8,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         for (int i = 0; i <= 10; i++) {
             int current = (max + min) / 2;
+            if (i == 10) {
+                System.out.println("Что за ультрачисло ты загадал? Я не угадал, уважение ");
+                break;
+            }
             System.out.println("Твое число " + current + " ?");
             char input = scan.next().charAt(0);
             switch(input) {
@@ -23,11 +27,7 @@ public class Main {
                 default:
                     System.out.println("ЧТО ТЫ ВВЕЛ, БАРАН?");
             }
-            if (i == 10) {
-                System.out.println("Что за ультрачисло ты загадал? Я не угадал, уважение ");
-                break;
-            }
-            else if (input == '=') {
+            if (input == '=') {
                 break;
             }
         }
